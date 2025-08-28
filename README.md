@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+
 # Tre Thanh Phat PWA Docs
 
+(Mô hình hoá quá trình hoạt động của ứng dụng Thanh Phát Bamboo PWA)
 Tài liệu này hướng dẫn xây dựng ứng dụng PWA nhằm hỗ trợ quản lý và chăm sóc cây tre hiệu quả. Repo cung cấp các hướng dẫn kỹ thuật, cấu trúc dự án, và các tính năng chính giúp người dùng theo dõi, cập nhật thông tin, và tối ưu hóa quy trình chăm sóc cây tre.
 
 ## Tóm tắt các tính năng
@@ -17,4 +20,6 @@ Tài liệu này hướng dẫn xây dựng ứng dụng PWA nhằm hỗ trợ q
 
 ---
 
-Bạn có thể bắt đầu chỉnh sửa hoặc bổ sung các tính năng mới tại đây.
+# Bạn có thể bắt đầu chỉnh sửa hoặc bổ sung các tính năng mới tại đây.
+
+> > > > > > > 9c5cb86a496074fcd209e6c721645eb1cf993aef

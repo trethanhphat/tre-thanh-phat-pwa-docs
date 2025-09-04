@@ -63,6 +63,7 @@ FETCH-Y --> SUCCESS
 FAIL["Chưa cập nhật"]
 DATA-Y --> FAIL
 FETCH-N --> FAIL
+FAIL --> OFFLINE
 
 COMPARE["So sánh dữ liệu với DATA OFFLINE"]
 

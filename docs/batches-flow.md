@@ -75,7 +75,7 @@ end
 
 
 subgraph DISPLAY["Hiển thị cho người dùng"]
-ONLINE"Hiển thị dữ liệu cập nhật"
+ONLINE["Hiển thị dữ liệu cập nhật"]
     FETCH-Y --> ONLINE
 
 OFFLINE["Hiển thị dữ liệu offline"]

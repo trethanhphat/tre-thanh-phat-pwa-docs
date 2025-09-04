@@ -10,19 +10,19 @@ LOAD --> WIFI
 LOAD --> CELL
 
 
-subgraph CELL["Mạng dữ liệu di động"]
+CELL["Mạng dữ liệu di động"]
 
 CELL --> CELL-Y["Có CELL"]
 CELL --> CELL-N["Không CELL"]
 
-end
 
-subgraph WIFI["Wifi"]
+
+WIFI["Wifi"]
 
 WIFI --> WIFI-Y["Có WIFI"]
 WIFI --> WIFI-N["Không WIFI"]
 
-end
+
 
 DATA["Dữ liệu offline"]
 

@@ -6,7 +6,7 @@ LOAD["Tải trang danh sách lô"]
 
 
 USER --> LOAD
-LOAD -- WIFI
+LOAD --> WIFI
 LOAD --> CELL
 
 

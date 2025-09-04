@@ -22,13 +22,14 @@ subgraph INTERNET["Có internet"]
 WIFI["Wifi"]
     WIFI --> WIFI-Y["Có WIFI"]
     WIFI --> WIFI-N["Không WIFI"]
+
+DATA["Dữ liệu offline"]
+    DATA --> DATA-Y["Có DATA"]
+    DATA --> DATA-N["Không DATA"]
 end
 
 
-DATA["Dữ liệu offline"]
 
-DATA --> DATA-Y["Có DATA"]
-DATA --> DATA-N["Không DATA"]
 
 
 

@@ -1,6 +1,12 @@
 ```mermaid
 flowchart TD
-A["Danh sách lô"]
+USER["Người dùng"]
+LOAD["Tải trang danh sách lô"]
+USER --> LOAD
+LOAD --> WIFI
+LOAD --> CELL
+
+
 CELL["Mạng dữ liệu di động"]
 
 CELL --> CELL-Y["Có CELL"]

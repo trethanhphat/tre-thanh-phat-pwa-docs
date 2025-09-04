@@ -73,7 +73,7 @@ COMPARE --> COMPARE-N["Dữ liệu không thay đổi"]
 SAVE["Lưu dữ liệu vào DATA OFFLINE"]
 
 COMPARE-Y --> SAVE
-
+COMPARE-N --> SUCCESS
 
 
 
@@ -94,7 +94,7 @@ OFFLINE["Hiển thị dữ liệu offline"]
 SUCCESS["Dữ liệu đã cập nhật"]
     DATA-Y --> SUCCESS
     FETCH-Y --> SUCCESS
-    COMPARE-N --> SUCCESS
+
     SAVE --> SUCCESS
 end
 ```

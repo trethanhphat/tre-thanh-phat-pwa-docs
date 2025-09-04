@@ -6,7 +6,7 @@ LOAD["Tải trang danh sách lô"]
 
 
 USER --> LOAD
-
+LOAD -- WIFI
 LOAD --> CELL
 
 
@@ -17,9 +17,11 @@ CELL --> CELL-N["Không CELL"]
 
 
 
-subgraph WIFI["Wifi"]
-    LOAD --> WIFI-Y["Có WIFI"]
-    LOAD --> WIFI-N["Không WIFI"]
+subgraph INTERNET["Có internet"]
+
+WIFI["Wifi"]
+    WIFI --> WIFI-Y["Có WIFI"]
+    WIFI --> WIFI-N["Không WIFI"]
 end
 
 

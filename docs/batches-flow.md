@@ -59,5 +59,17 @@ FETCH-N --> FAIL
 
 COMPARE["So sánh dữ liệu với DATA OFFLINE"]
 
+DATA-Y --> COMPARE
+FETCH-Y --> COMPARE
+
+COMPARE --> COMPARE-Y["Dữ liệu có thay đổi"]
+COMPARE --> COMPARE-N["Dữ liệu không thay đổi"]
+
+COMPARE-N --> SUCCESS
+
+SAVE["Lưu dữ liệu vào DATA OFFLINE"]
+
+COMPARE-Y --> SAVE
+
 
 ```

@@ -65,10 +65,7 @@ FETCH-N["Tải dữ liệu không thành công"]
 FETCH --> FETCH-Y
 FETCH --> FETCH-N
 
-SUCCESS["Dữ liệu đã cập nhật"]
 
-DATA-Y --> SUCCESS
-FETCH-Y --> SUCCESS
 
 FAIL["Chưa cập nhật"]
 DATA-Y --> FAIL
@@ -83,17 +80,23 @@ FETCH-Y --> COMPARE
 COMPARE --> COMPARE-Y["Dữ liệu có thay đổi"]
 COMPARE --> COMPARE-N["Dữ liệu không thay đổi"]
 
-COMPARE-N --> SUCCESS
+
 
 SAVE["Lưu dữ liệu vào DATA OFFLINE"]
 
 COMPARE-Y --> SAVE
-SAVE --> SUCCESS
 
 
-DISPLAY("Hiển thị cho người dùng")
 
-SUCCESS --> DISPLAY
-OFFLINE --> DISPLAY
-EMPTY --> DISPLAY
+
+
+
+
+subgraph DISPLAY("Hiển thị cho người dùng")
+SUCCESS["Dữ liệu đã cập nhật"]
+    DATA-Y --> SUCCESS
+    FETCH-Y --> SUCCESS
+    COMPARE-N --> SUCCESS
+    SAVE --> SUCCESS
+end
 ```

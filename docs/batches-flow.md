@@ -74,26 +74,22 @@ end
 
 
 
-
-
-
-
-
-
-
-
-
 subgraph DISPLAY["Hiển thị cho người dùng"]
-EMPTY["Cần online để tải dữ liệu lần đầu"]
-    WIFI-N --> EMPTY
-    CELL-N --> EMPTY
-    DATA-N --> EMPTY
+ONLINE"Hiển thị dữ liệu cập nhật"
+    FETCH-Y --> ONLINE
 
 OFFLINE["Hiển thị dữ liệu offline"]
     WIFI-N --> OFFLINE
     CELL-N --> OFFLINE
     DATA-Y --> OFFLINE
     FETCH-N --> OFFLINE
+end
+
+subgraph NOTIFICATION["Thông báo"]
+EMPTY["Cần online để tải dữ liệu lần đầu"]
+    WIFI-N --> EMPTY
+    CELL-N --> EMPTY
+    DATA-N --> EMPTY
 
 SUCCESS["Dữ liệu đã cập nhật"]
     DATA-Y --> SUCCESS
@@ -103,7 +99,6 @@ SUCCESS["Dữ liệu đã cập nhật"]
 
 FAIL["Chưa cập nhật"]
     DATA-Y --> FAIL
-
     OFFLINE --> FAIL
 end
 ```

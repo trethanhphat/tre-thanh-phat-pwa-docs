@@ -30,11 +30,12 @@ WIFI-N --> EMPTY
 CELL-N --> EMPTY
 DATA-N --> EMPTY
 
-WAIT["Chờ tải dữ liệu"]
+WAIT{"Chờ tải dữ liệu"}
 
 WIFI-Y --> WAIT
 CELL-Y --> WAIT
 DATA-N --> WAIT
+
 
 
 OFFLINE["Hiển thị dữ liệu offline"]
@@ -45,8 +46,8 @@ DATA-Y --> OFFLINE
 
 FETCH["Tải dữ liệu"]
 
-WIFI-Y --> FETCH
-CELL-Y --> FETCH
+WAIT --> FETCH
+
 
 FETCH-Y["Tải dữ liệu thành công"]
 FETCH-N["Tải dữ liệu không thành công"]

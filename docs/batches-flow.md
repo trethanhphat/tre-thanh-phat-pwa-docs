@@ -18,7 +18,8 @@ DATA --> |"Không"| E
 WAIT["Chờ tải dữ liệu"]
 
 WIFI --> |"Có"| WAIT
-CELL --> |"Không"|
+CELL --> |"Không"| WAIT
+DATA --> |"Không"| WAIT
 
 
 OFFLINE["Hiển thị dữ liệu offline"]

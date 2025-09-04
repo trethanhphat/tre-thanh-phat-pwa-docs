@@ -37,5 +37,16 @@ WIFI-N --> OFFLINE
 CELL-N --> OFFLINE
 DATA-Y --> OFFLINE
 
+FETCH["Tải dữ liệu"]
+FETCH-Y["Tải dữ liệu thành công"]
+FETCH-N["Tải dữ liệu không thành công"]
 
+SUCCESS["Dữ liệu đã cập nhật"]
+
+DATA-Y --> SUCCESS
+FETCH-Y --> SUCCESS
+
+FAIL["Chưa cập nhật"]
+DATA-Y --> FAIL
+FETCH-N --> FAIL
 ```

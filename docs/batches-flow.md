@@ -24,11 +24,11 @@ WIFI --> WIFI-N["Không WIFI"]
 
 end
 
-subgraph DATA["Dữ liệu offline"]
+DATA["Dữ liệu offline"]
 
 DATA --> DATA-Y["Có DATA"]
 DATA --> DATA-N["Không DATA"]
-end
+
 
 
 EMPTY["Cần online để tải dữ liệu lần đầu"]

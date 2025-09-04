@@ -73,7 +73,7 @@ COMPARE --> COMPARE-N["Dữ liệu không thay đổi"]
 SAVE["Lưu dữ liệu vào DATA OFFLINE"]
 
 COMPARE-Y --> SAVE
-COMPARE-N --> SUCCESS
+COMPARE-N --> OFFLINE
 
 
 

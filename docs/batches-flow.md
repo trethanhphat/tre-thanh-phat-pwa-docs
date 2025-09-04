@@ -2,31 +2,40 @@
 flowchart TD
 A["Danh sách lô"]
 CELL["Mạng dữ liệu di động"]
+
+CELL --> CELL-Y["Có CELL"]
+CELL --> CELL-N["Không CELL"]
+
 WIFI["Wifi"]
+
+WIFI --> WIFI-Y["Có WIFI"]
+WIFI --> WIFI-N["Không WIFI"]
+
 DATA["Dữ liệu offline"]
 
+DATA --> DATA-Y["Có DATA"]
+DATA --> DATA-N["Không DATA"]
 
-WIFI --> WIFI-Y["Có Wifi"]
-WIFI --> WIFI-N["Không Wifi"]
 
-E["Cần online để tải dữ liệu lần đầu"]
 
-WIFI --> |"Không"| E
-CELL --> |"Không"| E
-DATA --> |"Không"| E
+EMPTY["Cần online để tải dữ liệu lần đầu"]
+
+WIFI-N --> EMPTY
+CELL-N --> EMPTY
+DATA-N --> EMPTY
 
 WAIT["Chờ tải dữ liệu"]
 
-WIFI --> |"Có"| WAIT
-CELL --> |"Không"| WAIT
-DATA --> |"Không"| WAIT
+WIFI-Y --> WAIT
+CELL-Y --> WAIT
+DATA-N --> WAIT
 
 
 OFFLINE["Hiển thị dữ liệu offline"]
 
-WIFI --> |"Không"| OFFLINE
-CELL --> |"Không"| OFFLINE
-DATA --> |"Có"| OFFLINE
+WIFI-N --> OFFLINE
+CELL-N --> OFFLINE
+DATA-Y --> OFFLINE
 
 
 ```

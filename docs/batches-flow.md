@@ -1,25 +1,31 @@
 ```mermaid
 flowchart TD
 A["Danh sách lô"]
-B["Mạng dữ liệu di động"]
-C["Wifi"]
-D["Dữ liệu offline"]
+CELL["Mạng dữ liệu di động"]
+WIFI["Wifi"]
+DATA["Dữ liệu offline"]
 
 
-
-
+WIFI --> WIFI-Y["Có Wifi"]
+WIFI --> WIFI-N["Không Wifi"]
 
 E["Cần online để tải dữ liệu lần đầu"]
 
-B --> |"Không"| E
-C --> |"Không"| E
-D --> |"Không"| E
+WIFI --> |"Không"| E
+CELL --> |"Không"| E
+DATA --> |"Không"| E
+
+WAIT["Chờ tải dữ liệu"]
+
+WIFI --> |"Có"| WAIT
+CELL --> |"Không"|
 
 
+OFFLINE["Hiển thị dữ liệu offline"]
 
-F["Hiển thị dữ liệu offline"]
+WIFI --> |"Không"| OFFLINE
+CELL --> |"Không"| OFFLINE
+DATA --> |"Có"| OFFLINE
 
-B --> |"Không"| F
-C --> |"Không"| F
-D --> |"Có"| F
+
 ```

@@ -68,7 +68,7 @@ subgraph SAVE-MANAGER["Lưu trữ dữ liệu offline"]
 SAVE["Lưu dữ liệu vào DATA OFFLINE"]
     COMPARE-Y --> SAVE
 
-    COMPARE-N --> OFFLINE
+
 end
 
 
@@ -99,6 +99,7 @@ SUCCESS["Dữ liệu đã cập nhật"]
     DATA-Y --> SUCCESS
     FETCH-Y --> SUCCESS
     SAVE --> SUCCESS
+    COMPARE-N --> SUCCESS
 
 FAIL["Chưa cập nhật"]
     DATA-Y --> FAIL

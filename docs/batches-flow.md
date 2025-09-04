@@ -55,10 +55,7 @@ WAIT{"Chờ tải dữ liệu"}
 end
 
 
-FAIL["Chưa cập nhật"]
-DATA-Y --> FAIL
-FETCH-N --> FAIL
-FAIL --> OFFLINE
+
 
 COMPARE["So sánh dữ liệu với DATA OFFLINE"]
 
@@ -94,7 +91,11 @@ OFFLINE["Hiển thị dữ liệu offline"]
 SUCCESS["Dữ liệu đã cập nhật"]
     DATA-Y --> SUCCESS
     FETCH-Y --> SUCCESS
-
     SAVE --> SUCCESS
+
+FAIL["Chưa cập nhật"]
+    DATA-Y --> FAIL
+    FETCH-N --> FAIL
+    OFFLINE --> FAIL
 end
 ```

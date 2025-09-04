@@ -34,21 +34,13 @@ end
 
 
 
-EMPTY["Cần online để tải dữ liệu lần đầu"]
-
-WIFI-N --> EMPTY
-CELL-N --> EMPTY
-DATA-N --> EMPTY
 
 
 
 
 
-OFFLINE["Hiển thị dữ liệu offline"]
 
-WIFI-N --> OFFLINE
-CELL-N --> OFFLINE
-DATA-Y --> OFFLINE
+
 
 
 
@@ -89,6 +81,16 @@ COMPARE-Y --> SAVE
 
 
 subgraph DISPLAY["Hiển thị cho người dùng"]
+EMPTY["Cần online để tải dữ liệu lần đầu"]
+    WIFI-N --> EMPTY
+    CELL-N --> EMPTY
+    DATA-N --> EMPTY
+
+OFFLINE["Hiển thị dữ liệu offline"]
+    WIFI-N --> OFFLINE
+    CELL-N --> OFFLINE
+    DATA-Y --> OFFLINE
+
 SUCCESS["Dữ liệu đã cập nhật"]
     DATA-Y --> SUCCESS
     FETCH-Y --> SUCCESS

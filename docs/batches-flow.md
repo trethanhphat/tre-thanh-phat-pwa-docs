@@ -1,6 +1,10 @@
 ```mermaid
 flowchart TD
-A["Người dùng"] --> |"Mở menu"| B["Trang danh sách lô"] --> |"Không có mạng"| C["Nhìn thấy mã lô/cây"]
+A["Người dùng"]
+B["Danh sách lô]
+A --> |"Mở menu"| B
 
-C -->|"Tham số (t)"|{Mã cây}
+B --> |"Không có mạng"| C ["Dữ liệu offline"]
+B --> |"Có internet"| D ["Tải dữ liệu trong nền"]
+
 ```

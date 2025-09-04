@@ -55,22 +55,26 @@ WAIT{"Chờ tải dữ liệu"}
 end
 
 
-
-
+subgraph SYNC["So sánh và lưu dữ liệu"]
 COMPARE["So sánh dữ liệu với DATA OFFLINE"]
+    DATA-Y --> COMPARE
+    FETCH-Y --> COMPARE
 
-DATA-Y --> COMPARE
-FETCH-Y --> COMPARE
-
-COMPARE --> COMPARE-Y["Dữ liệu có thay đổi"]
-COMPARE --> COMPARE-N["Dữ liệu không thay đổi"]
-
-
+    COMPARE --> COMPARE-Y["Dữ liệu có thay đổi"]
+    COMPARE --> COMPARE-N["Dữ liệu không thay đổi"]
 
 SAVE["Lưu dữ liệu vào DATA OFFLINE"]
+    COMPARE-Y --> SAVE
 
-COMPARE-Y --> SAVE
-COMPARE-N --> OFFLINE
+    COMPARE-N --> OFFLINE
+end
+
+
+
+
+
+
+
 
 
 

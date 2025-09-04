@@ -7,7 +7,7 @@ D["Dữ liệu offline"]
 
 
 
-%"Trường hợp offline và chưa có dữ liệu offline"%
+
 
 E["Cần online để tải dữ liệu lần đầu"]
 
@@ -15,7 +15,7 @@ B --> |"Không"| E
 C --> |"Không"| E
 D --> |"Không"| E
 
-%"Trường hợp offline và đã có dữ liệu offline"%
+
 
 F["Hiển thị dữ liệu offline"]
 

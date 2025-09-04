@@ -87,6 +87,7 @@ OFFLINE["Hiển thị dữ liệu offline"]
     WIFI-N --> OFFLINE
     CELL-N --> OFFLINE
     DATA-Y --> OFFLINE
+    FETCH-N --> OFFLINE
 
 SUCCESS["Dữ liệu đã cập nhật"]
     DATA-Y --> SUCCESS
@@ -95,7 +96,7 @@ SUCCESS["Dữ liệu đã cập nhật"]
 
 FAIL["Chưa cập nhật"]
     DATA-Y --> FAIL
-    FETCH-N --> FAIL
+
     OFFLINE --> FAIL
 end
 ```

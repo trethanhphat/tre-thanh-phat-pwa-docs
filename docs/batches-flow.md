@@ -38,8 +38,15 @@ CELL-N --> OFFLINE
 DATA-Y --> OFFLINE
 
 FETCH["Tải dữ liệu"]
+
+WIFI-Y --> FETCH
+CELL-Y --> FETCH
+
 FETCH-Y["Tải dữ liệu thành công"]
 FETCH-N["Tải dữ liệu không thành công"]
+
+FETCH --> FETCH-Y
+FETCH --> FETCH-N
 
 SUCCESS["Dữ liệu đã cập nhật"]
 
@@ -49,4 +56,8 @@ FETCH-Y --> SUCCESS
 FAIL["Chưa cập nhật"]
 DATA-Y --> FAIL
 FETCH-N --> FAIL
+
+COMPARE["So sánh dữ liệu với DATA OFFLINE"]
+
+
 ```

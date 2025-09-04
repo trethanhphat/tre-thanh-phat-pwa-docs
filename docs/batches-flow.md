@@ -1,10 +1,14 @@
 ```mermaid
 flowchart TD
-A["Người dùng"]
-B["Danh sách lô"]
+A["Danh sách lô"]
+B["Mạng dữ liệu di động"]
+C["Wifi"]
+D["Dữ liệu offline"]
 
-A --> |"Mở menu"| B
-B --> |"Không có mang"| C["Dữ liệu offline"]
-B --> |"Có internet"| D["Tải dữ liệu trong nền"]
+E["Cần online để tải dữ liệu lần đầu"]
+
+B --> |"Không có"| E
+C --> |"Không có"| E
+D --> |"Không có"| E
 
 ```

@@ -70,6 +70,6 @@ COMPARE-N --> SUCCESS
 SAVE["Lưu dữ liệu vào DATA OFFLINE"]
 
 COMPARE-Y --> SAVE
-
+SAVE --> SUCCESS
 
 ```

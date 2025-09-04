@@ -92,7 +92,7 @@ COMPARE-Y --> SAVE
 
 
 
-subgraph DISPLAY("Hiển thị cho người dùng")
+subgraph DISPLAY["Hiển thị cho người dùng"]
 SUCCESS["Dữ liệu đã cập nhật"]
     DATA-Y --> SUCCESS
     FETCH-Y --> SUCCESS

@@ -2,26 +2,33 @@
 flowchart TD
 USER["Người dùng"]
 LOAD["Tải trang danh sách lô"]
+
+
+
 USER --> LOAD
 LOAD --> WIFI
 LOAD --> CELL
 
 
-CELL["Mạng dữ liệu di động"]
+subgraph CELL["Mạng dữ liệu di động"]
 
 CELL --> CELL-Y["Có CELL"]
 CELL --> CELL-N["Không CELL"]
 
-WIFI["Wifi"]
+end
+
+subgraph WIFI["Wifi"]
 
 WIFI --> WIFI-Y["Có WIFI"]
 WIFI --> WIFI-N["Không WIFI"]
 
-DATA["Dữ liệu offline"]
+end
+
+subgraph DATA["Dữ liệu offline"]
 
 DATA --> DATA-Y["Có DATA"]
 DATA --> DATA-N["Không DATA"]
-
+end
 
 
 EMPTY["Cần online để tải dữ liệu lần đầu"]

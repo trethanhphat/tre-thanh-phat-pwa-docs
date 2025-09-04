@@ -80,4 +80,9 @@ SAVE["Lưu dữ liệu vào DATA OFFLINE"]
 COMPARE-Y --> SAVE
 SAVE --> SUCCESS
 
+
+DISPLAY("Hiển thị cho người dùng")
+
+SUCCESS --> DISPLAY
+OFFLINE --> DISPLAY
 ```

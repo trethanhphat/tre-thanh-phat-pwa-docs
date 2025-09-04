@@ -85,4 +85,5 @@ DISPLAY("Hiển thị cho người dùng")
 
 SUCCESS --> DISPLAY
 OFFLINE --> DISPLAY
+EMPTY --> DISPLAY
 ```

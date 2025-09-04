@@ -10,19 +10,20 @@ LOAD --> WIFI
 LOAD --> CELL
 
 
-CELL["Mạng dữ liệu di động"]
 
-CELL --> CELL-Y["Có CELL"]
-CELL --> CELL-N["Không CELL"]
 
 
 
 subgraph INTERNET["Có internet"]
-
+CELL["Mạng dữ liệu di động"]
+    CELL --> CELL-Y["Có CELL"]
+    CELL --> CELL-N["Không CELL"]
 WIFI["Wifi"]
     WIFI --> WIFI-Y["Có WIFI"]
     WIFI --> WIFI-N["Không WIFI"]
+end
 
+subgraph LOCAL["Dữ liệu trên máy"]
 DATA["Dữ liệu offline"]
     DATA --> DATA-Y["Có DATA"]
     DATA --> DATA-N["Không DATA"]

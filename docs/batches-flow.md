@@ -2,17 +2,9 @@
 flowchart TD
 USER["Người dùng"]
 LOAD["Tải trang danh sách lô"]
-
-
-
-USER --> LOAD
-LOAD --> WIFI
-LOAD --> CELL
-
-
-
-
-
+    USER --> LOAD
+    LOAD --> WIFI
+    LOAD --> CELL
 
 subgraph INTERNET["Có internet"]
 CELL["Mạng dữ liệu di động"]
@@ -29,21 +21,6 @@ DATA["Dữ liệu offline"]
     DATA --> DATA-N["Không DATA"]
 end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 subgraph FETCH["Tải dữ liệu"]
 WAIT{"Chờ tải dữ liệu"}
     WIFI-Y --> WAIT
@@ -53,7 +30,6 @@ WAIT{"Chờ tải dữ liệu"}
     WAIT --> FETCH-Y["Tải dữ liệu thành công"]
     WAIT --> FETCH-N["Tải dữ liệu không thành công"]
 end
-
 
 subgraph COMPARE-MANAGER["So sánh dữ liệu"]
 COMPARE["So sánh dữ liệu với DATA OFFLINE"]
@@ -67,12 +43,7 @@ end
 subgraph SAVE-MANAGER["Lưu trữ dữ liệu offline"]
 SAVE["Lưu dữ liệu vào DATA OFFLINE"]
     COMPARE-Y --> SAVE
-
-
 end
-
-
-
 
 subgraph DISPLAY["Hiển thị cho người dùng"]
 ONLINE["Hiển thị dữ liệu cập nhật"]
@@ -92,7 +63,6 @@ EMPTY["Cần online để tải dữ liệu lần đầu"]
     DATA-N --> EMPTY
 
 SUCCESS["Dữ liệu đã cập nhật"]
-    DATA-Y --> SUCCESS
     FETCH-Y --> SUCCESS
     SAVE --> SUCCESS
     COMPARE-N --> SUCCESS

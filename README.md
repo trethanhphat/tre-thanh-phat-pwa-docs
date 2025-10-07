@@ -22,4 +22,4 @@ Tài liệu này hướng dẫn xây dựng ứng dụng PWA nhằm hỗ trợ q
 
 # Bạn có thể bắt đầu chỉnh sửa hoặc bổ sung các tính năng mới tại đây.
 
-> > > > > > > 9c5cb86a496074fcd209e6c721645eb1cf993aef
+- Mở ứng dụng lần đầu có mạng và đã có sw actived nhưng khi offline mở các trang khác như batches hay products hoặc product/[id] thì vẫn báo không có mạng --> Cần xem lại liệt kê các trang có cache

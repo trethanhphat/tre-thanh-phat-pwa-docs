@@ -2,14 +2,14 @@
 
 ```mermaid
 flowchart TD
-    A["👤 Người dùng"] -->|Mở| B["⚙ SettingsPage"]
+    USER["👤 Người dùng"] -->|Mở| B["⚙ SettingsPage"]
 
     subgraph Settings["Cài đặt đồng bộ"]
       B -->|Bật| C["setSyncOverMobile = true"]
       B -->|Tắt| D["setSyncOverMobile = false"]
     end
 
-    A -->|Nhấn| E{"Có bản cập nhật Service Worker?"}
+    USER -->|Nhấn| E{"Có bản cập nhật Service Worker?"}
 
     subgraph UpdateFlow["Luồng cập nhật"]
       E -->|Có| F["update() → SKIP_WAITING"]

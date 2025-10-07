@@ -1,6 +1,7 @@
 ```mermaid
 flowchart TD
-A["Người dùng"] --> |"Quét QR"| B["Ra link QR"] --> |"Không có mạng"| C["Nhìn thấy mã lô/cây"]
+USER["Người dùng"] --> |"Quét QR"| QR-LINK["Ra link QR"] --> |"Không có mạng"| DISPLAY["Nhìn thấy mã lô/cây"]
 
-C -->|"Tham số (t)"|{Mã cây}
+QR-LINK -->|"Tham số (t)"| TREE-CODE{Mã cây}
+QR-LINK -->|"Tham số (b)"| BRANCH-CODE{Mã cây}
 ```

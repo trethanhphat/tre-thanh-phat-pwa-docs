@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
 A[User mở ứng dụng PWA] --> B{IndexedDB đã sẵn sàng?}
 B -- Chưa có --> C[Tạo database & object stores]
@@ -21,3 +22,4 @@ B -- Đã có --> D[Tải metadata (createdAt, expireAt)]
     style F fill:#ffdddd,stroke:#e44,stroke-width:2px
     style I fill:#ddffdd,stroke:#4b4,stroke-width:2px
     style K fill:#ffffcc,stroke:#cc0,stroke-width:2px
+```

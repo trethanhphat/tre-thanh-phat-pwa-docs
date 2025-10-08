@@ -33,7 +33,46 @@ WAIT{"Chờ tải dữ liệu"}
 
     WAIT --> FETCH-Y["Tải dữ liệu thành công"]
     WAIT --> FETCH-N["Tải dữ liệu không thành công"]
+end
 
+subgraph COMPARE-MANAGER["So sánh dữ liệu"]
+COMPARE["So sánh dữ liệu với DATA OFFLINE"]
+    DATA-Y --> COMPARE
+    FETCH-Y --> COMPARE
 
+    COMPARE --> COMPARE-Y["Dữ liệu có thay đổi"]
+    COMPARE --> COMPARE-N["Dữ liệu không thay đổi"]
+end
+
+subgraph SAVE-MANAGER["Lưu trữ dữ liệu offline"]
+SAVE["Lưu dữ liệu vào DATA OFFLINE"]
+    COMPARE-Y --> SAVE
+end
+
+subgraph DISPLAY["Hiển thị cho người dùng"]
+ONLINE["Hiển thị dữ liệu cập nhật"]
+    FETCH-Y --> ONLINE
+
+OFFLINE["Hiển thị dữ liệu offline"]
+    WIFI-N --> OFFLINE
+    CELL-N --> OFFLINE
+    DATA-Y --> OFFLINE
+    FETCH-N --> OFFLINE
+end
+
+subgraph NOTIFICATION["Thông báo"]
+EMPTY["Cần online để tải dữ liệu lần đầu"]
+    WIFI-N --> EMPTY
+    CELL-N --> EMPTY
+    DATA-N --> EMPTY
+
+SUCCESS["Dữ liệu đã cập nhật"]
+    FETCH-Y --> SUCCESS
+    SAVE --> SUCCESS
+    COMPARE-N --> SUCCESS
+
+FAIL["Chưa cập nhật"]
+    DATA-Y --> FAIL
+    OFFLINE --> FAIL
 end
 ```

@@ -1,7 +1,7 @@
 ```mermaid
 flowchart TD
 
-USER["Người dùng"] --> |"Truy cập link"| REDIRECT {Xử lý phản hồi}
+USER["Người dùng"] --> |"Truy cập link"| REDIRECT{Xử lý phản hồi}
 
 REDIRECT -->|"Không có tham số"| APP-HOME["Trang chủ ứng dụng PWA"]
 

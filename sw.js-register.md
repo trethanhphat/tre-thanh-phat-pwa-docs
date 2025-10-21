@@ -1,0 +1,4 @@
+- Đăng ký sw ở component riêng để có thể tùy chỉnh các thông tin cần thiết.
+- Component được load ở app/layout.tsx để đảm bảo được load ở tất cả các trang.
+- Xử lý luồng cập nhật: bắn SKIP_WAITING cho SW mới (installed + đã có controller) và lắng nghe controllerchange để reload. Đây là luồng update hợp lệ theo lifecycle chuẩn của Service Worker.
+- Bọc trong window.addEventListener('load', ...) như bạn đang làm an toàn cho lần truy cập đầu vì tránh tranh chấp tài nguyên lúc trang render (nhất là mobile). Đây là khuyến nghị chung của Google: “trì hoãn đăng ký đến sau khi trang tải lần đầu” để không làm chậm TTI lần đầu. --> Nhưng cần cải tiến tránh ảnh hưởng hiệu năng lần đầu nhưng vẫn cần sẵn dùng luôn lần load sau

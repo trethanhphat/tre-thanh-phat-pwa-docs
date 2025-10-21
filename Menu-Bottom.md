@@ -1,5 +1,5 @@
 ```mermaid
-flowchart BU
+flowchart BT
 
 MENU-BOTTOM --> BACK["Quay lại"]
 

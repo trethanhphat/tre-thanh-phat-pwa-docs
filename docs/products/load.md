@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
 A0["Người dùng mở trang Products"] -->|useEffect khởi chạy| A1["loadProductsFromDB()"]
 A1 -->|"Đọc IndexedDB (STORE_PRODUCTS)"| A2["Danh sách sản phẩm offline"]
@@ -28,3 +29,4 @@ A3 -->|"Nhận JSON sản phẩm"| A4["syncProducts(products)"]
 
     A0 --> C1
     A4 --> C4
+```

@@ -1,12 +1,12 @@
 ```mermaid
 flowchart TD
-MENU --> HOME ["🏠 Trang chủ"]
+MENU --> HOME["🏠 Trang chủ"]
 
-MENU --> NEWS ["📰 Tin tức"]
+MENU --> NEWS["📰 Tin tức"]
 
-MENU --> BATCHES ["🎋 Lô trồng"]
+MENU --> BATCHES["🎋 Lô trồng"]
 
-MENU --> PRODUCTS ["🛒 Sản phẩm"]
+MENU --> PRODUCTS["🛒 Sản phẩm"]
 
 MENU --> REPORT["📊 Báo cáo"]
 

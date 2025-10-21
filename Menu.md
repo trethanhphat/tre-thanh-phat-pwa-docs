@@ -1,5 +1,5 @@
 ```mermaid
-flowchart TD
+flowchart LR
 MENU --> HOME["🏠 Trang chủ"]
 
 MENU --> NEWS["📰 Tin tức"]

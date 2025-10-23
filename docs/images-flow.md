@@ -26,7 +26,7 @@ sequenceDiagram
 flowchart TD
 
 A[Component / Page] -->|danh sách URL ảnh| B[useImageCacheTracker hook]
-B -->|prefetch + kiểm tra lỗi| C{"Loại ảnh?"}
+B -->|"prefetch + kiểm tra lỗi"| C{"Loại ảnh?"}
 
 C -->|news| D["ensureNewsImageCachedByUrl()"]
 C -->|product| E["ensureProductImageCachedByUrl()"]

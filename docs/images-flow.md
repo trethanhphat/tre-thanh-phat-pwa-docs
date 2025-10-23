@@ -32,11 +32,11 @@ C -->|news| D["ensureNewsImageCachedByUrl()"]
 C -->|product| E["ensureProductImageCachedByUrl()"]
 C -->|generic| F["fetch trực tiếp, không lưu IDB"]
 
-D -->|"→ gọi"| G[saveNewsImageByUrl()]
-E -->|"→ gọi"| H[saveProductImageIfNotExists()]
+D -->|"goi"| G[saveNewsImageByUrl()]
+E -->|"goi"| H[saveProductImageIfNotExists()]
 
-G -->|"→ dùng"| I[fetchImageBlobSmart()]
-H -->|"→ dùng"| J[tryFetchImage()]
+G -->|"dung"| I[fetchImageBlobSmart()]
+H -->|"dung"| J[tryFetchImage()]
 
 I -->|"lấy ảnh"| K1[fetch trực tiếp] -->|nếu lỗi| K2[/api/image-proxy/]
 J -->|"lấy ảnh"| L1[fetch no-cors] -->|nếu lỗi| L2[/api/image-proxy/]
@@ -47,4 +47,5 @@ M -->|"tải & cache CDN"| N[(Ảnh đích gốc hoặc remote server)]
 I & J --> O[Blob data]
 O -->|put| P[(IndexedDB store)]
 P -->|"sau đó"| Q[Render UI bằng URL.createObjectURL(blob)]
+
 ```

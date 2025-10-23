@@ -28,9 +28,9 @@ flowchart TD
 A[Component / Page] -->|danh sách URL ảnh| B[useImageCacheTracker hook]
 B -->|prefetch + kiểm tra lỗi| C{"Loại ảnh?"}
 
-C -->|news| D[ensureNewsImageCachedByUrl()]
-C -->|product| E[ensureProductImageCachedByUrl()]
-C -->|generic| F[fetch trực tiếp, không lưu IDB]
+C -->|news| D["ensureNewsImageCachedByUrl()"]
+C -->|product| E["ensureProductImageCachedByUrl()"]
+C -->|generic| F["fetch trực tiếp, không lưu IDB"]
 
 D -->|→ gọi| G[saveNewsImageByUrl()]
 E -->|→ gọi| H[saveProductImageIfNotExists()]
